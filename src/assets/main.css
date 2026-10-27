@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #14213d;
+  --ink-soft: #55607a;
+  --paper: #f5f6f8;
+  --surface: #ffffff;
+  --line: #dde1e8;
+  --navy: #14213d;
+  --navy-hover: #22345c;
+  --marigold: #f2b01e;
+  --danger: #a8281f;
+  --radius: 10px;
+  --font: 'IBM Plex Sans Thai', 'Noto Sans Thai', 'Leelawadee UI', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* neutralise the default Vite template layout on #app */
+#app {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--marigold);
+  outline-offset: 2px;
+}
+
+/* top navigation */
+nav {
+  display: flex;
+  gap: 0.25rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 0;
+}
+
+nav a {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #e7eaf0;
+  color: var(--ink);
+}
+
+nav a.router-link-active:not([href='/']),
+nav a[href='/'].router-link-exact-active {
+  background: var(--navy);
+  color: #fff;
+}
